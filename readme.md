@@ -10,10 +10,6 @@
 
 找到适合自己系统的版本，这里用Mac为例；
 所以我们下载libwebp-1.0.3-mac-10.14.tar.gz
-* libwebp-0.6.0-windows-x86.zip 适用于 Windows-x86.
-* libwebp-0.6.0-windows-x64.zip 适用于 Windows-x64.
-* libwebp-0.6.0-linux-x86-32.tar.gz 适用于 GNU/Linux-x86.
-* libwebp-0.6.0-linux-x86-64.tar.gz 适用于 GNU/Linux-x86_64.
 
 `
 tar -xzvf libwebp-1.0.3-mac-10.14.tar.gz 
