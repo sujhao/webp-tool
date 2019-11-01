@@ -2,6 +2,8 @@
 
 [toc]
 
+## 简单来说webp是一种google搞出来的图片格式，就是更加清晰(相同大小)更加小(相同清晰度),支持动态图gif格式，相信这图片格式会成为主流格式
+
 ## 支持jpg,jpeg,png,TIFF, gif转换为webp
 [webp google官方技术参考网](https://developers.google.com/speed/webp/docs/cwebp)
 `https://developers.google.com/speed/webp/docs/cwebp`
