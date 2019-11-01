@@ -18,15 +18,19 @@ tar -xzvf libwebp-1.0.3-mac-10.14.tar.gz
 `
 
 ## webp 命令:
+```
 图片 转 webp : cwebp -q 90  psb.jpeg -o output.webp
 webp 转 图片 : dwebp  output.webp -o test.png
 
 git 转 webp : gif2webp -q 80 bottom1.gif -o bottom1.webp
+```
 
 ## webp支持
 暂时经过测试creator中android,ios都支持使用webp格式,
 但是网页版有些浏览器兼容有问题，所以原生游戏推荐使用这款图片格式，短小精悍，
 浏览器支持情况，google肯定支持（自己的图片格式还不支持搞毛）,safari,ie还没支持，
 所以网页版要看看如何兼容使用webp格式图片再使用
+
+![](./code.jpg)
 
 ![](./mm.gif)
