@@ -1,0 +1,1 @@
+.\lib\libwebp-1.0.3-windows-x64\bin\cwebp.exe .\test.jpg -o .\test.webp
