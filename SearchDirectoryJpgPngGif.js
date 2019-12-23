@@ -24,7 +24,7 @@ function searchDirectory(searchPath) {
             if (suffix == "jpg" || suffix == "jpeg" || suffix == "png" || suffix == "gif") {
                 minPathList.push(searchPath);
                 minPathFileList.push(filedir)
-                fileNameList.push(filename)
+                fileNameList.push(filenamearr[0])
             }
         }
     }
@@ -35,7 +35,7 @@ function getAllDirectory(searthPath) {
     minPathFileList = []
     fileNameList = []
     searchDirectory(searthPath);
-    return [minPathList, minPathFileList, ];
+    return [minPathList, minPathFileList, fileNameList];
 }
 
 exports.getAllDirectory = getAllDirectory;

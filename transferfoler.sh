@@ -1,1 +1,0 @@
-node main.js ./input ./output

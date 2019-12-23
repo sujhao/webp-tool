@@ -1,1 +1,1 @@
-node main.js .\input .\output
+node main.js .\\input 

@@ -5,18 +5,12 @@ const fs = require('fs')
 const child_process = require('child_process');
 
 const compressPath = process.argv[2]
-const outputPath = process.argv[3]
 if (!compressPath) {
     console.warn("compressPath not exist=", compressPath)
     return
 }
-if (!outputPath) {
-    console.warn("outputPath  not exist=", outputPath)
-    return
-}
 
 console.info("compressPath =", compressPath)
-console.info("outputPath =", outputPath)
 
 
 let minArr =  SearchDirectory.getAllDirectory(compressPath);
@@ -27,17 +21,16 @@ let fileNameList = minArr[2]
 
 console.log("minPathList=", minPathList)
 console.log("minPathFileList=", minPathFileList)
+console.log("fileNameList=", fileNameList)
 
-for (let i = 0; i < minPathFileList.length-1; i++) {
-    let tempOut = outputPath+"\\"+ minPathList[i]
-    console.log("tempOut===", tempOut)
-    if (!fs.existsSync(tempOut)) {
-        fs.mkdirSync(tempOut);
-    }
+for (let i = 0; i < minPathFileList.length; i++) {
     let cmdPath = ""
     if (process.platform == "darwin") { //mac
+        cmdPath = "./lib/libwebp-1.0.3-mac-10.14/bin/cwebp "+minPathFileList[i] +" -o "+minPathList[i]+"/"+fileNameList[i]+".webp"
+        console.log("mac cmdPath==", cmdPath)
     } else {
-        cmdPath = ".\\lib\\libwebp-1.0.3-windows-x64\\bin\\cwebp.exe "+minPathFileList[i] +" -o "+tempOut+
+        cmdPath = ".\\lib\\libwebp-1.0.3-windows-x64\\bin\\cwebp.exe "+minPathFileList[i] +" -o "+minPathList[i]+"/"+fileNameList[i]+".webp"
+        console.log("windows cmdPath==", cmdPath)
     }
     child_process.exec(cmdPath, (error, stdout, stderr) => {  
         if (error) {
