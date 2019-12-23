@@ -37,6 +37,6 @@ for (let i = 0; i < minPathFileList.length; i++) {
             console.log("转换失败", error);
             return
         }
-        console.log("转换成功....", stdout);
+        console.log("转换成功....", cmdPath);
     });
 }
