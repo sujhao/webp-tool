@@ -7,6 +7,7 @@ const path = require("path");
 let minPathList = [];
 let minPathFileList = [];
 let fileNameList = []
+let fileSuffixList = []
 
 
 function searchDirectory(searchPath) {
@@ -25,6 +26,7 @@ function searchDirectory(searchPath) {
                 minPathList.push(searchPath);
                 minPathFileList.push(filedir)
                 fileNameList.push(filenamearr[0])
+                fileSuffixList.push(filenamearr[filenamearr.length-1].toLowerCase())
             }
         }
     }
@@ -34,8 +36,9 @@ function getAllDirectory(searthPath) {
     minPathList = [];
     minPathFileList = []
     fileNameList = []
+    fileSuffixList = [];
     searchDirectory(searthPath);
-    return [minPathList, minPathFileList, fileNameList];
+    return [minPathList, minPathFileList, fileNameList, fileSuffixList];
 }
 
 exports.getAllDirectory = getAllDirectory;
