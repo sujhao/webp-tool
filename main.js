@@ -36,7 +36,16 @@ for (let i = 0; i < minPathFileList.length; i++) {
             console.warn("暂时不支持文件类型", fileSuffixList[i])
         }
         console.log("mac cmdPath==", cmdPath)
-    } else {
+    }else if(process.platform == "linux"){
+        if(fileSuffixList[i] == "gif"){
+            cmdPath = "./lib/libwebp-1.0.3-linux-x86-64/bin/gif2webp "+minPathFileList[i] +" -o "+minPathList[i]+"/"+fileNameList[i]+".webp"
+        }else if(fileSuffixList[i] == "jpg" || fileSuffixList[i] == "png" || fileSuffixList[i] == "jpeg"){
+            cmdPath = "./lib/libwebp-1.0.3-linux-x86-64/bin/cwebp "+minPathFileList[i] +" -o "+minPathList[i]+"/"+fileNameList[i]+".webp"
+        }else{
+            console.warn("暂时不支持文件类型", fileSuffixList[i])
+        }
+        console.log("linux cmdPath==", cmdPath)
+    }else {
         if(fileSuffixList[i] == "gif"){
             cmdPath = ".\\lib\\libwebp-1.0.3-windows-x64\\bin\\gif2webp "+minPathFileList[i] +" -o "+minPathList[i]+"/"+fileNameList[i]+".webp"
         }else if(fileSuffixList[i] == "jpg" || fileSuffixList[i] == "png" || fileSuffixList[i] == "jpeg"){
